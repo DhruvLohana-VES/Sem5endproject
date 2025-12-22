@@ -1,21 +1,53 @@
-# CareCue - Medication Adherence Platform (Frontend)
+# CareCue - Medication Adherence Platform
 
-A comprehensive healthcare platform frontend for managing medication adherence with separate modules for Patients, Caretakers, and Blood Donors.
+A comprehensive healthcare platform for managing medication adherence with separate modules for Patients, Caretakers, and Blood Donors.
 
 ## 🏗️ Project Structure
 
 ```
-CC Frontend/         # React + Vite
+├── CC Backend/          # Node.js + Express + Supabase
+└── CC Frontend/         # React + Vite
 ```
-
-**Note:** Backend is in a separate repository for security reasons.
 
 ## 🚀 Quick Start
 
 ### Prerequisites
 - Node.js 18+ installed
-- Backend API running (separate repo)
+- Supabase account
 - Git
+
+### Backend Setup
+
+1. Navigate to backend:
+```bash
+cd "CC Backend"
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Create `.env` file with your Supabase credentials:
+```env
+PORT=5001
+NODE_ENV=development
+SUPABASE_URL=your_supabase_url
+SUPABASE_ANON_KEY=your_anon_key
+SUPABASE_SERVICE_KEY=your_service_key
+JWT_SECRET=your_jwt_secret
+JWT_EXPIRE=7d
+FRONTEND_URL=http://localhost:3000
+```
+
+4. Run database schema in Supabase SQL Editor (use `database/schema.sql`)
+
+5. Start backend:
+```bash
+npm run dev
+```
+
+Backend runs on: http://localhost:5001
 
 ### Frontend Setup
 

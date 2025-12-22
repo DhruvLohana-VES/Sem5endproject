@@ -1,6 +1,3 @@
-# Exclude Backend folder entirely
-CC Backend/
-
 # Environment variables (CRITICAL - Never commit these!)
 .env
 .env.local
